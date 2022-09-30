@@ -33,15 +33,19 @@ console.log("okay");
         console.log(data);
         var{schools}= data
         for (var i = 0; i < schools.length; i++) {
-          var schoolName = document.createElement('h3');
-          var summary = document.createElement('p')
+          var schoolBox =document.createElement('div')
+          var schoolName = document.createElement('p');
+          var summary = document.createElement('h5');
           var rating = document.createElement('h5');
+          schoolBox.classList.add("title", "tile", "is-ancestor", "box");
+          schoolBox.setAttribute('style', 'border-style: solid; border-color: var(--light-blue); border-width: 5px; flex-direction: column;')
           schoolName.textContent = schools[i].name ;
-          summary.textContent = schools[i].school-summary ;
+          summary.textContent = schools[i]["school-summary"] ;
           rating.textContent = "This school recieved a/an "+ schools[i].rating + "/10 rating" ;
-          schoolList.append(schoolName);
-          schoolList.append(summary);
-          schoolList.append(rating);
+          schoolList.append(schoolBox);
+          schoolBox.append(schoolName);
+          schoolBox.append(summary);
+          schoolBox.append(rating);
           console.log(schools[i].name, schools[i].school-summary, schools[i].rating );
         }
       });
