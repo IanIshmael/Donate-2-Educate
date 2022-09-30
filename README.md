@@ -2,50 +2,70 @@
 
 ## Table of Contents 
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [Description](#description)
-- [Installation](#installation)
+- [Deployment](#Deployment)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 
 ## Description
 
-This app that allows prospective donors to search for schools in their area that could benefit most from a charitable donation.
+This app allows prospective donors to search for schools in their area that could benefit most from a charitable donation.
 
 
 - What was our motivation?
+As a team we were motivated to develop an application that would help schools in our communities.
 - Why did we build this project? 
+All of us know someone who is affected by the lack of funding for our k-12 schools. 
 - What problem does it solve?
+If implemented, this app will help draw more funding for nearby schools. 
 - What did we learn?
+We gained skills in time management, team building, leadership, and most importantly, we reinforced concepts we learned from the DU Full-stack coding camp including but not limited to css frameworks, html, javascript, and api implimentation. 
 
 
-## Installation
+## Deployment
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+In order to access this application, simply follow the link below or copy and paste it in your browser!
+
+* [https://ianishmael.github.io/Donate-2-Educate/](https://ianishmael.github.io/Donate-2-Educate/)
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Screen Shot
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+   <table>
+    <tr>
+      <td>Donate-2-Educate Page Example</td>
+    </tr>
+    <tr>
+      <td><img src="Assets/imgs/images" height=600 alt="screenshot of Donate-2-Educate Website"></td>
+    </tr>
+  </table>
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+Author(s): Ian Ishmael, Ryan Younggreen, Matt Tomchik, Sachi Kaleikau-Takaoka
+  GitHub: <https://github.com/IanIshmael> <https://github.com/mtomchik> <https://github.com/YoungANDgreen> <https://github.com/kaleikautakaoka>
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+This application was created with supporting APIs from Mapbox and Great Schools.
+* [mapbox](https://www.mapbox.com/)
+* [Great Schools](https://www.greatschools.org/api/)
 
-If you followed tutorials, include links to those here as well.
+CSS framework is compliments of Bulma,
+* [bulma css stylesheets](https://bulmatemplates.github.io/bulma-templates/)
+
+Other technologies used;
+JS, CSS, html
+
+Tutorials from:
+* [w3schools](https://www.w3schools.com/)
+* [youtube](https://www.youtube.com/watch?v=OySigNMXOZU&t=409s)
+* [stackoverflow](https://meta.stackoverflow.com/questions/374740/stack-overflow-rest-api)
+
 
 ## License
 
-MIT License
+This project is [mit](https://choosealicense.com/licenses/mit/) licensed.
 
 Copyright (c) [2022] [IanIshmael]
 
@@ -69,7 +89,10 @@ SOFTWARE.
 
 ---
 
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+🏆 
+
+
+
 
 
 
