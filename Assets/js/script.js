@@ -4,6 +4,18 @@ var recent = document.getElementById('recent');
 var gsAPI = "Ycy8UJFQDy6FqyYrVm8M24nEp005eWdl9B2W0aSm"
 var last = localStorage.getItem('schoolList');
 
+// window.navigator.geolocation.getCurrentPosition(position => {
+//   console.log(position.coords.longitude); 
+//   console.log(position.coords.latitude);
+//   const lat = position.coords.latitude;
+//   const lng = position.coords.longitude;
+
+// });
+
+
+
+
+
 (function () {
   var burger = document.querySelector('.burger');
   var menu = document.querySelector('#' + burger.dataset.target);
@@ -14,11 +26,16 @@ var last = localStorage.getItem('schoolList');
 })();
 
 recent.textContent = last;
-
+ 
 
 function getApi() {
 console.log("okay");
-    var requestUrl = 'https://gs-api.greatschools.org/nearby-schools?lat=37.7940627&lon=-122.2680029&limit=5&distance=5&';
+navigator.geolocation.getCurrentPosition(position => {
+  console.log(position.coords.longitude); 
+  console.log(position.coords.latitude);
+  const lat = position.coords.latitude;
+  const lng = position.coords.longitude;
+var requestUrl = 'https://gs-api.greatschools.org/nearby-schools?lat=' + lat + '&lon=' + lng + '&limit=5&distance=5&';
 
     fetch(requestUrl, {
       method: "GET",
@@ -26,6 +43,7 @@ console.log("okay");
         "x-api-key": gsAPI
     }
     })
+ 
       .then(function (response) {
         return response.json();
       })
@@ -48,38 +66,15 @@ console.log("okay");
           schoolBox.append(rating);
           console.log(schools[i].name, schools[i].school-summary, schools[i].rating );
         }
+      })
       });
   }
+
+
   getSchools.addEventListener('click', getApi);
 
 var schoolList = document.getElementById("list");
 var getSchools = document.getElementById("btn-location")
-
-// function getApi() {
-//    console.log("");
-
-    // var requestUrl = 'pk.eyJ1Ijoic2FjaGl0ayIsImEiOiJjbDhqbGVrcHgwN3ZuM29vMnpjdnIxczh3In0.VJfjX1VRozeJ9uHHCWIbJw';
-    // fetch(requestUrl)
-    //   .then(function (response) {
-    //     return response.json();
-    //   })
-    //   .then(function (data) {
-    //     console.log(data);
-    //     for (var i = 0; i < data.length; i++) {
-    //       var  = document.createElement('h3');
-    //       var summary = document.createElement('p')
-    //       var rating = document.createElement('h5');
-    //       schoolName.textContent = "data[i].name" ;
-    //       summary.textContent = "data[i].school-summary" ;
-    //       rating.textContent = "data[i].rating" ;
-    //       schoolList.append(schoolName);
-    //       schoolList.append(summary);
-    //       schoolList.append(rating);
-    //     }
-    //   });
-  // }
-  getSchools.addEventListener('click', getApi);
-
 
 function store() {
     localStorage.setItem('schoolList', last);
