@@ -4,18 +4,6 @@ var recent = document.getElementById('recent');
 var gsAPI = "Ycy8UJFQDy6FqyYrVm8M24nEp005eWdl9B2W0aSm"
 var last = localStorage.getItem('schoolList');
 
-// window.navigator.geolocation.getCurrentPosition(position => {
-//   console.log(position.coords.longitude); 
-//   console.log(position.coords.latitude);
-//   const lat = position.coords.latitude;
-//   const lng = position.coords.longitude;
-
-// });
-
-
-
-
-
 (function () {
   var burger = document.querySelector('.burger');
   var menu = document.querySelector('#' + burger.dataset.target);
@@ -65,6 +53,8 @@ var requestUrl = 'https://gs-api.greatschools.org/nearby-schools?lat=' + lat + '
           schoolBox.append(summary);
           schoolBox.append(rating);
           console.log(schools[i].name, schools[i].school-summary, schools[i].rating );
+            localStorage.setItem('schoolList', schools[0].name + " " + schools[1].name + " " + schools[2].name + " " + schools[3].name + " " + schools[4].name + " ") ;
+            history.textContent = localStorage.getItem('schoolList');
         }
         mapboxgl.accessToken = 'pk.eyJ1IjoicnlvdW5nZ3JlZW4iLCJhIjoiY2w4bWZ6cDByMDVpdzQwcndic2xyaThqeiJ9.eDGZtS6hg6TDGyU8CUWxnQ';
         const map = new mapboxgl.Map({
@@ -98,12 +88,3 @@ var requestUrl = 'https://gs-api.greatschools.org/nearby-schools?lat=' + lat + '
 
 
   getSchools.addEventListener('click', getApi);
-
-var schoolList = document.getElementById("list");
-var getSchools = document.getElementById("btn-location")
-
-function store() {
-    localStorage.setItem('schoolList', last);
-}
-
-getSchools.addEventListener('click', store);
