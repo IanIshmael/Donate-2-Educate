@@ -69,6 +69,32 @@ var requestUrl = 'https://gs-api.greatschools.org/nearby-schools?lat=' + lat + '
               localStorage.setItem('schoolList', last);
           // }
         }
+        mapboxgl.accessToken = 'pk.eyJ1IjoicnlvdW5nZ3JlZW4iLCJhIjoiY2w4bWZ6cDByMDVpdzQwcndic2xyaThqeiJ9.eDGZtS6hg6TDGyU8CUWxnQ';
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-streets-v11',
+        center: [position.coords.longitude, position.coords.latitude],
+        zoom: 12
+        })
+        marker = new mapboxgl.Marker()
+        .setLngLat([data.schools[0].lon, data.schools[0].lat])
+        .addTo(map);
+
+        marker2 = new mapboxgl.Marker()
+        .setLngLat([data.schools[1].lon, data.schools[1].lat])
+        .addTo(map);
+
+        marker3 = new mapboxgl.Marker()
+        .setLngLat([data.schools[2].lon, data.schools[2].lat])
+        .addTo(map);
+
+        marker4 = new mapboxgl.Marker()
+        .setLngLat([data.schools[3].lon, data.schools[3].lat])
+        .addTo(map);
+
+        marker5 = new mapboxgl.Marker()
+        .setLngLat([data.schools[4].lon, data.schools[4].lat])
+        .addTo(map);
       })
       });
   }
