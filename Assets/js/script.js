@@ -65,6 +65,9 @@ var requestUrl = 'https://gs-api.greatschools.org/nearby-schools?lat=' + lat + '
           schoolBox.append(summary);
           schoolBox.append(rating);
           console.log(schools[i].name, schools[i].school-summary, schools[i].rating );
+          // function store() {
+              localStorage.setItem('schoolList', last);
+          // }
         }
       })
       });
@@ -73,11 +76,8 @@ var requestUrl = 'https://gs-api.greatschools.org/nearby-schools?lat=' + lat + '
 
   getSchools.addEventListener('click', getApi);
 
-var schoolList = document.getElementById("list");
-var getSchools = document.getElementById("btn-location")
+// var schoolList = document.getElementById("list");
+// var getSchools = document.getElementById("btn-location")
 
-function store() {
-    localStorage.setItem('schoolList', last);
-}
 
-getSchools.addEventListener('click', store);
+// getSchools.addEventListener('click', store);
