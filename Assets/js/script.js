@@ -44,7 +44,7 @@ var requestUrl = 'https://gs-api.greatschools.org/nearby-schools?lat=' + lat + '
           var summary = document.createElement('h5');
           var rating = document.createElement('h5');
           schoolBox.classList.add("title", "tile", "is-ancestor", "box");
-          schoolBox.setAttribute('style', 'border-style: solid; border-color: var(--light-blue); border-width: 5px; flex-direction: column;')
+          schoolBox.setAttribute('style', 'border-style: solid; border-color: var(--light-blue); border-width: 5px; flex-direction: column; font-size: 16px')
           schoolName.textContent = schools[i].name ;
           summary.textContent = schools[i]["school-summary"] ;
           rating.textContent = "This school recieved a/an "+ schools[i].rating + "/10 rating" ;
